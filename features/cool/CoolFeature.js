@@ -16,4 +16,9 @@ export default class CoolFeature
         }
         
     }
+
+    getACoolMessage()
+    {
+        return this.name + " is pretty cool";
+    }
 }
