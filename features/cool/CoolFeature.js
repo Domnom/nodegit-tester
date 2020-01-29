@@ -1,9 +1,19 @@
+const ValidationService = require('../../service/ValidationService');
+
 export default class CoolFeature
 {
     name;
 
-    constructor()
+    constructor(name)
     {
-        this.name = "My Cool feature"
+        if (ValidationService.isACoolName(name))
+        {
+            this.name = name;
+        }
+        else
+        {
+            this.name = "My Cool feature";
+        }
+        
     }
 }
